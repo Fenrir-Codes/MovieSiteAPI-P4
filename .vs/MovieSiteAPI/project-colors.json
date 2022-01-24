@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "51ac23f5-58cc-40e5-9ca2-143c4d7159a2": {
+      "ProjectGuid": "51ac23f5-58cc-40e5-9ca2-143c4d7159a2",
+      "DisplayName": "MovieSiteAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
