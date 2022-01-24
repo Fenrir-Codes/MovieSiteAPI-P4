@@ -8,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using MovieSiteAPI.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +41,7 @@ namespace MovieSiteAPI
             });
 
             //getting connection details
-            services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
+            services.AddDbContext<MovieSiteAPIContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Connection")));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -50,8 +49,6 @@ namespace MovieSiteAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MovieSiteAPI-P4", Version = "v1" });
             });
 
-            services.AddDbContext<MovieSiteAPIContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MovieSiteAPIContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
