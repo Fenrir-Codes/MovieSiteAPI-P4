@@ -23,7 +23,7 @@ namespace MovieSiteAPI.Controllers
 
         // GET: api/Profiles
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Profile>>> GetProfile()
+        public async Task<ActionResult<IEnumerable<Profile>>> GetProfiles()
         {
             return await _context.Profile.ToListAsync();
         }
