@@ -82,25 +82,26 @@ namespace MovieSiteAPI.Controllers
                 var user = await _context.Profile.Where(user => user.Email == Email && user.Password == Password).FirstOrDefaultAsync();
                 if (user != null)
                 {
+                    return true;
                     //fill the response object with values ->
-                    var response = new Profile();
-                    {
-                        response.ProfileId = user.ProfileId;
-                        response.Firstname = user.Firstname;
-                        response.Lastname = user.Lastname;
-                        response.Address = user.Address;
-                        response.Email = user.Email;
-                        response.Phone = user.Phone;
-                        response.Image = user.Image;
-                        response.Role = user.Role;
-                    }
-                     //then return the object ->
-                     return Ok(response);
+                    //var response = new Profile();
+                    //{
+                    //    response.ProfileId = user.ProfileId;
+                    //    response.Firstname = user.Firstname;
+                    //    response.Lastname = user.Lastname;
+                    //    response.Address = user.Address;
+                    //    response.Email = user.Email;
+                    //    response.Phone = user.Phone;
+                    //    response.Image = user.Image;
+                    //    response.Role = user.Role;
+                    //}
+                    // //then return the object ->
+                    // return Ok(response);
                     
 
 
                 }
-                return NotFound(false);
+                return false;
 
             }
             catch (Exception ex)
