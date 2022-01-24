@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kfRbAoFRjUHbl3bIFcsS7OO+WjcyKkeKnGWD7akYaTIhqTlqAnuWgRKayyMS6U7MpntP0Iltq4E+57+pn3Vwiw==",
+  "dgSpecHash": "svaXyre9pJ0AlCxwxq2nYV5etGRnj+mUC8NnA3Fy76NSBXzrjykeTrBEG596O24eqxDCyq5EB5Y2jbO+coS6xA==",
   "success": true,
-  "projectFilePath": "E:\\GithubDesktop\\MovieSiteAPI-P4-2\\MovieSiteAPI\\MovieSiteAPI.csproj",
+  "projectFilePath": "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joseph\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

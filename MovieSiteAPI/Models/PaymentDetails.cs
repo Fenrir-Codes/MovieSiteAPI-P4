@@ -2,7 +2,7 @@
 {
     public class PaymentDetails
     {
-        public int PaymentId { get; set; }  //--> PK
+        public int PaymentDetailsId { get; set; }  //--> PK
         public int OrderId { get; set; }  //--> FK Order
 
         public string PaymentType { get; set; } // card , mobilepay, etc...
