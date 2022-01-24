@@ -28,6 +28,7 @@ namespace MovieSiteAPI.Controllers
             return await _context.Profile.ToListAsync();
         }
 
+
         // GET: api/Profiles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Profile>> GetProfile(int id)
@@ -73,6 +74,44 @@ namespace MovieSiteAPI.Controllers
             return NoContent();
         }
 
+        [HttpPost("Login")]
+        public async Task<ActionResult<bool>> Login(string Email, string Password)
+        {
+            try
+            {
+                var user = await _context.Profile.Where(user => user.Email == Email && user.Password == Password).FirstOrDefaultAsync();
+                if (user != null)
+                {
+                    //fill the response object with values ->
+                    var response = new Profile();
+                    {
+                        response.ProfileId = user.ProfileId;
+                        response.Firstname = user.Firstname;
+                        response.Lastname = user.Lastname;
+                        response.Address = user.Address;
+                        response.Email = user.Email;
+                        response.Phone = user.Phone;
+                        response.Image = user.Image;
+                        response.Role = user.Role;
+                    }
+                     //then return the object ->
+                     return Ok(response);
+                    
+
+
+                }
+                return NotFound(false);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
         // POST: api/Profiles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -104,5 +143,6 @@ namespace MovieSiteAPI.Controllers
         {
             return _context.Profile.Any(e => e.ProfileId == id);
         }
+
     }
 }
