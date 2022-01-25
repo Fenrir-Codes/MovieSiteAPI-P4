@@ -21,12 +21,19 @@ namespace MovieSiteAPI.Controllers
             _context = context;
         }
 
+        #region Get All the movies listed
+
         // GET: api/Movies
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Movie>>> GetMovie()
         {
             return await _context.Movie.ToListAsync();
         }
+
+        #endregion
+
+
+        #region Get movie with ID
 
         // GET: api/Movies/5
         [HttpGet("{id}")]
@@ -41,6 +48,11 @@ namespace MovieSiteAPI.Controllers
 
             return movie;
         }
+
+        #endregion
+
+
+        #region update movie with ID
 
         // PUT: api/Movies/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -73,6 +85,11 @@ namespace MovieSiteAPI.Controllers
             return NoContent();
         }
 
+        #endregion
+
+
+        #region Create movie
+
         // POST: api/Movies
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -83,6 +100,11 @@ namespace MovieSiteAPI.Controllers
 
             return CreatedAtAction("GetMovie", new { id = movie.MovieId }, movie);
         }
+
+        #endregion
+
+
+        #region Delete movie With ID
 
         // DELETE: api/Movies/5
         [HttpDelete("{id}")]
@@ -100,9 +122,16 @@ namespace MovieSiteAPI.Controllers
             return NoContent();
         }
 
+        #endregion
+
+
+        #region Bool is movie exist?
         private bool MovieExists(int id)
         {
             return _context.Movie.Any(e => e.MovieId == id);
         }
+
+        #endregion
+
     }
 }
