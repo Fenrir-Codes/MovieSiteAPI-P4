@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {}
+    "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {}
   },
   "projects": {
-    "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {
+    "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+        "projectUniqueName": "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
         "projectName": "MovieSiteAPI",
-        "projectPath": "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
-        "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
-        "outputPath": "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
+        "projectPath": "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+        "packagesPath": "C:\\Users\\rasm04c6\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Joseph\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\rasm04c6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

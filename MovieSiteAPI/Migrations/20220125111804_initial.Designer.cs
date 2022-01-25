@@ -10,8 +10,8 @@ using MovieSiteAPI.Data;
 namespace MovieSiteAPI.Migrations
 {
     [DbContext(typeof(MovieSiteAPIContext))]
-    [Migration("20220125093948_ini")]
-    partial class ini
+    [Migration("20220125111804_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
