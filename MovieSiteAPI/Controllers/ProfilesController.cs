@@ -21,6 +21,8 @@ namespace MovieSiteAPI.Controllers
             _context = context;
         }
 
+
+        #region Get all profiles function
         // GET: api/Profiles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Profile>>> GetProfiles()
@@ -28,7 +30,10 @@ namespace MovieSiteAPI.Controllers
             return await _context.Profile.ToListAsync();
         }
 
+        #endregion
 
+
+        #region Get a profile with ID function
         // GET: api/Profiles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Profile>> GetProfile(int id)
@@ -43,8 +48,12 @@ namespace MovieSiteAPI.Controllers
             return profile;
         }
 
+        #endregion
+
+
+        #region Update Profile function
+
         // PUT: api/Profiles/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProfile(int id, Profile profile)
         {
@@ -74,47 +83,12 @@ namespace MovieSiteAPI.Controllers
             return NoContent();
         }
 
-        [HttpPost("Login")]
-        public async Task<ActionResult<bool>> Login(string Email, string Password)
-        {
-            try
-            {
-                var user = await _context.Profile.Where(user => user.Email == Email && user.Password == Password).FirstOrDefaultAsync();
-                if (user != null)
-                {
-                    return true;
-                    //fill the response object with values ->
-                    //var response = new Profile();
-                    //{
-                    //    response.ProfileId = user.ProfileId;
-                    //    response.Firstname = user.Firstname;
-                    //    response.Lastname = user.Lastname;
-                    //    response.Address = user.Address;
-                    //    response.Email = user.Email;
-                    //    response.Phone = user.Phone;
-                    //    response.Image = user.Image;
-                    //    response.Role = user.Role;
-                    //}
-                    // //then return the object ->
-                    // return Ok(response);
-                    
+        #endregion
 
 
-                }
-                return false;
-
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception(ex.Message);
-            }
-
-
-        }
+        #region Create new Profile fuction
 
         // POST: api/Profiles
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Profile>> PostProfile(Profile profile)
         {
@@ -123,6 +97,11 @@ namespace MovieSiteAPI.Controllers
 
             return CreatedAtAction("GetProfile", new { id = profile.ProfileId }, profile);
         }
+
+        #endregion
+
+
+        #region Delete profile functon
 
         // DELETE: api/Profiles/5
         [HttpDelete("{id}")]
@@ -140,10 +119,61 @@ namespace MovieSiteAPI.Controllers
             return NoContent();
         }
 
+        #endregion
+
+
+        #region Profileexist boolean
         private bool ProfileExists(int id)
         {
             return _context.Profile.Any(e => e.ProfileId == id);
         }
+        #endregion
+
+
+        #region Login function
+
+        // Login function
+        [HttpPost("Login")]
+        public async Task<ActionResult<Profile>> Login(string Email, string Password)
+        {
+            try
+            {
+                var response = new Profile(); // initalize a new profile as response.
+
+                // user variable should look for a data from database where
+                // user.Email and user.Password should match the Email and Password set in database
+                var user = await _context.Profile.Where(user => user.Email == Email && user.Password == Password).FirstOrDefaultAsync();
+
+                //if user find in database with the typed in credentials -->
+                if (user != null)
+                {
+                    //response fill with user data from database ->
+                    response.ProfileId = user.ProfileId; // like response.ProfileId filled with data from user.ProfileId match in the database ans so on...
+                    response.Firstname = user.Firstname;
+                    response.Lastname = user.Lastname;
+                    response.Address = user.Address;
+                    response.Email = user.Email;
+                    response.Phone = user.Phone;
+                    response.Image = user.Image;
+                    response.Role = user.Role;
+
+                    return Ok(response); // return response
+
+                }
+                return null; //else just return null
+
+            }
+            catch (Exception ex) //this is for just error handling
+            {
+
+                throw new Exception(ex.Message);
+            }
+
+
+        }
+
+        #endregion
+
 
     }
 }
