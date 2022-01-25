@@ -7389,19 +7389,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vorag\\.nuget\\packages\\": {}
+    "C:\\Users\\Joseph\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+      "projectUniqueName": "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
       "projectName": "MovieSiteAPI",
-      "projectPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
-      "packagesPath": "C:\\Users\\vorag\\.nuget\\packages\\",
-      "outputPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
+      "projectPath": "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+      "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
+      "outputPath": "E:\\GithubDesktop\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\vorag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Joseph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
