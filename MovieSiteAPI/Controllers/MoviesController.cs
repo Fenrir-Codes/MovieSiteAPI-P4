@@ -37,13 +37,13 @@ namespace MovieSiteAPI.Controllers
 
         // GET: api/Movies/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Movie>> GetMovie(int id)
+        public async Task<List<Movie>> GetMovie(int id) //changed to return a List , now it is returning a readable array and angular can read it.
         {
-            var movie = await _context.Movie.FindAsync(id);
+            var movie = await _context.Movie.Where(m => m.MovieId == id).ToListAsync();
 
             if (movie == null)
             {
-                return NotFound();
+                return null;
             }
 
             return movie;
