@@ -11,6 +11,7 @@ namespace MovieSiteAPI.Models
         public string Lastname { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
+        public string selfIntro { get; set; }
         public string Image { get; set; }
         public int Role { get; set; }
 
