@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {}
+    "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {
+    "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+        "projectUniqueName": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
         "projectName": "MovieSiteAPI",
-        "projectPath": "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
-        "packagesPath": "C:\\Users\\rasm04c6\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rasm04c6\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
+        "projectPath": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+        "packagesPath": "C:\\Users\\rfk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rasm04c6\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rfk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,6 +79,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
