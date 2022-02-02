@@ -52,7 +52,7 @@ namespace MovieSiteAPI.Controllers
 
         #endregion
 
-        #region Get movie with ID
+        #region Get movie with Date
 
         // GET: api/Movies/mostRecentMovies
         // getting the most recent movies added to database today is 
