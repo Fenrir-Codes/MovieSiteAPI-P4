@@ -10,8 +10,8 @@ using MovieSiteAPI.Data;
 namespace MovieSiteAPI.Migrations
 {
     [DbContext(typeof(MovieSiteAPIContext))]
-    [Migration("20220125111804_initial")]
-    partial class initial
+    [Migration("20220202104049_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,10 +67,16 @@ namespace MovieSiteAPI.Migrations
                     b.Property<string>("Language")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("Rating")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("videoUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MovieId");
@@ -188,6 +194,9 @@ namespace MovieSiteAPI.Migrations
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
+
+                    b.Property<string>("selfIntro")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProfileId");
 
