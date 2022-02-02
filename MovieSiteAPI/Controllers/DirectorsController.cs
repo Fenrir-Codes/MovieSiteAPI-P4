@@ -23,27 +23,26 @@ namespace MovieSiteAPI.Controllers
 
         // GET: api/Directors
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Director>>> GetDirector()
+        public async Task<List<Director>> GetDirector()
         {
             return await _context.Director.ToListAsync();
         }
 
         // GET: api/Directors/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Director>> GetDirector(int id)
+        public async Task<List<Director>> GetDirector(int id)
         {
-            var director = await _context.Director.FindAsync(id);
+            var director = await _context.Director.Where(d => d.DirectorId == id).ToListAsync();
 
             if (director == null)
             {
-                return NotFound();
+                return null;
             }
 
             return director;
         }
 
         // PUT: api/Directors/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDirector(int id, Director director)
         {
