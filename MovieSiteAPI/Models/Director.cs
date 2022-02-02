@@ -8,6 +8,8 @@ namespace MovieSiteAPI.Models
         public string Firstname { get; set; }
         public string Lastname { get; set; }
 
-        public ICollection<Movie> Movies { get; set; }
+
+        /* EF Relations */
+        public List<Movie> Movie { get; set; }
     }
 }
