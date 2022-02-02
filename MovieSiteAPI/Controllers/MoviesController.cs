@@ -41,12 +41,36 @@ namespace MovieSiteAPI.Controllers
         {
             var movie = await _context.Movie.Where(m => m.MovieId == id).ToListAsync();
 
+
             if (movie == null)
             {
                 return null;
             }
 
             return movie;
+        }
+
+        #endregion
+
+        #region Get movie with ID
+
+        // GET: api/Movies/mostRecentMovies
+        // getting the most recent movies added to database today is 
+        [HttpGet("mostRecentMovies")]
+        public async Task<List<Movie>> GetMostRecentMovies()
+        {
+            DateTime today = DateTime.Now; // today's datetime
+
+            //look for movies where added date is less than today's date and added date is bigger than today -7 days
+            var movieAfterDate = await _context.Movie.Where(m => m.AddedDate < today.Date 
+            && m.AddedDate > today.AddDays(-8)).ToListAsync();
+
+            if (movieAfterDate == null)
+            {
+                return null;
+            }
+
+            return movieAfterDate;
         }
 
         #endregion
