@@ -10,7 +10,7 @@ using MovieSiteAPI.Data;
 namespace MovieSiteAPI.Migrations
 {
     [DbContext(typeof(MovieSiteAPIContext))]
-    [Migration("20220202104049_init")]
+    [Migration("20220202130716_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,6 +46,9 @@ namespace MovieSiteAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("AddedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
@@ -72,6 +75,9 @@ namespace MovieSiteAPI.Migrations
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ThumbImage")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -206,7 +212,7 @@ namespace MovieSiteAPI.Migrations
             modelBuilder.Entity("MovieSiteAPI.Models.Movie", b =>
                 {
                     b.HasOne("MovieSiteAPI.Models.Director", null)
-                        .WithMany("Movie")
+                        .WithMany("Movies")
                         .HasForeignKey("DirectorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -238,7 +244,7 @@ namespace MovieSiteAPI.Migrations
 
             modelBuilder.Entity("MovieSiteAPI.Models.Director", b =>
                 {
-                    b.Navigation("Movie");
+                    b.Navigation("Movies");
                 });
 
             modelBuilder.Entity("MovieSiteAPI.Models.Movie", b =>
