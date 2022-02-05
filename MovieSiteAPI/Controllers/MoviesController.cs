@@ -62,8 +62,8 @@ namespace MovieSiteAPI.Controllers
             DateTime today = DateTime.Now; // today's datetime
 
             //look for movies where added date is less than today's date and added date is bigger than today -7 days
-            var movieAfterDate = await _context.Movie.Where(m => m.AddedDate < today.Date 
-            && m.AddedDate > today.AddDays(-8)).ToListAsync();
+            var movieAfterDate = await _context.Movie.Where(m => m.AddedDate.Date <= today.Date 
+            && m.AddedDate.Date >= today.AddDays(-15)).ToListAsync();
 
             if (movieAfterDate == null)
             {
