@@ -7389,11 +7389,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\rfk\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\vorag\\.nuget\\packages\\": {}
+>>>>>>> Joseph-Branch
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
       "projectName": "MovieSiteAPI",
       "projectPath": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
@@ -7402,6 +7407,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rfk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+      "projectName": "MovieSiteAPI",
+      "projectPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+      "packagesPath": "C:\\Users\\vorag\\.nuget\\packages\\",
+      "outputPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\vorag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Joseph-Branch
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

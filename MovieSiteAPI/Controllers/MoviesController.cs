@@ -51,6 +51,32 @@ namespace MovieSiteAPI.Controllers
 
         #endregion
 
+<<<<<<< HEAD
+=======
+        #region Get movie with Date
+
+        // GET: api/Movies/mostRecentMovies
+        // getting the most recent movies added to database today is 
+        [HttpGet("mostRecentMovies")]
+        public async Task<List<Movie>> GetMostRecentMovies()
+        {
+            DateTime today = DateTime.Now; // today's datetime
+
+            //look for movies where added date is less than today's date and added date is bigger than today -7 days
+            var movieAfterDate = await _context.Movie.Where(m => m.AddedDate.Date <= today.Date 
+            && m.AddedDate.Date >= today.AddDays(-15)).ToListAsync();
+
+            if (movieAfterDate == null)
+            {
+                return null;
+            }
+
+            return movieAfterDate;
+        }
+
+        #endregion
+
+>>>>>>> Joseph-Branch
 
         #region update movie with ID
 
