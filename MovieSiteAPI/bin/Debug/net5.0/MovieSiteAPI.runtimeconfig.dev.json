@@ -1,13 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\rfk\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\rfk\\.nuget\\packages"
-=======
-      "C:\\Users\\vorag\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\vorag\\.nuget\\packages"
->>>>>>> Joseph-Branch
+      "C:\\Users\\Joseph\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Joseph\\.nuget\\packages"
     ]
   }
 }

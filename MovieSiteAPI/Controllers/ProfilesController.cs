@@ -42,7 +42,7 @@ namespace MovieSiteAPI.Controllers
 
             if (profile == null)
             {
-                return NotFound();
+                return NotFound("Profile with id: {id}, not found in database.");
             }
 
             return profile;
@@ -59,7 +59,7 @@ namespace MovieSiteAPI.Controllers
         {
             if (id != profile.ProfileId)
             {
-                return BadRequest();
+                return BadRequest("Profile with id: {id}, not found in database.");
             }
 
             _context.Entry(profile).State = EntityState.Modified;
@@ -72,7 +72,7 @@ namespace MovieSiteAPI.Controllers
             {
                 if (!ProfileExists(id))
                 {
-                    return NotFound();
+                    return NotFound("Profile with id: {id}, not found in database.");
                 }
                 else
                 {
@@ -95,7 +95,14 @@ namespace MovieSiteAPI.Controllers
             _context.Profile.Add(profile);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProfile", new { id = profile.ProfileId }, profile);
+            var isCreated = CreatedAtAction("GetProfile", new { id = profile.ProfileId }, profile);
+
+            if (isCreated != null)
+            {
+                return profile;
+            }
+            return null;
+     
         }
 
         #endregion
@@ -110,7 +117,7 @@ namespace MovieSiteAPI.Controllers
             var profile = await _context.Profile.FindAsync(id);
             if (profile == null)
             {
-                return NotFound();
+                return NotFound("Profile with id: {id}, not found in database.");
             }
 
             _context.Profile.Remove(profile);

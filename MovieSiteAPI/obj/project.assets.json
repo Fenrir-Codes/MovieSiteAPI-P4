@@ -7389,34 +7389,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\rfk\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\vorag\\.nuget\\packages\\": {}
->>>>>>> Joseph-Branch
+    "C:\\Users\\Joseph\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+      "projectUniqueName": "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
       "projectName": "MovieSiteAPI",
-      "projectPath": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
-      "packagesPath": "C:\\Users\\rfk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rfk\\Documents\\GitHub\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
+      "projectPath": "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+      "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
+      "outputPath": "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rfk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
-      "projectName": "MovieSiteAPI",
-      "projectPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
-      "packagesPath": "C:\\Users\\vorag\\.nuget\\packages\\",
-      "outputPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\vorag\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Joseph-Branch
+        "C:\\Users\\Joseph\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7481,24 +7466,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.13, 5.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
