@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {}
+    "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {}
   },
   "projects": {
-    "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {
+    "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+        "projectUniqueName": "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
         "projectName": "MovieSiteAPI",
-        "projectPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
-        "packagesPath": "C:\\Users\\vorag\\.nuget\\packages\\",
-        "outputPath": "G:\\GitHub repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
+        "projectPath": "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\MovieSiteAPI.csproj",
+        "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
+        "outputPath": "E:\\Github Repositories\\MovieSiteAPI-P4\\MovieSiteAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vorag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Joseph\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

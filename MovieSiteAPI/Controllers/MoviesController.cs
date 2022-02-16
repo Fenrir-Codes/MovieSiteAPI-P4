@@ -61,7 +61,7 @@ namespace MovieSiteAPI.Controllers
         {
             DateTime today = DateTime.Now; // today's datetime
 
-            //look for movies where added date is less than today's date and added date is bigger than today -7 days
+            //look for movies where added date is less than today's date and added date is bigger than today -14 days
             var movieAfterDate = await _context.Movie.Where(m => m.AddedDate.Date <= today.Date 
             && m.AddedDate.Date >= today.AddDays(-15)).ToListAsync();
 
@@ -122,7 +122,13 @@ namespace MovieSiteAPI.Controllers
             _context.Movie.Add(movie);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMovie", new { id = movie.MovieId }, movie);
+            var isCreated = CreatedAtAction("GetMovie", new { id = movie.MovieId }, movie);
+
+            if (isCreated != null)
+            {
+                return movie;
+            }
+            return null;
         }
 
         #endregion
