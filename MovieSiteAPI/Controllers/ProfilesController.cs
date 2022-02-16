@@ -27,7 +27,7 @@ namespace MovieSiteAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Profile>>> GetProfiles()
         {
-            return await _context.Profile.ToListAsync();
+            return await _context.Profile.Include(o => o.Orders).ToListAsync();
         }
 
         #endregion
@@ -36,16 +36,17 @@ namespace MovieSiteAPI.Controllers
         #region Get a profile with ID function
         // GET: api/Profiles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Profile>> GetProfile(int id)
+        public async Task<ActionResult> GetProfile(int id)
         {
-            var profile = await _context.Profile.FindAsync(id);
-
+            var profile = await _context.Profile.Include(o => o.Orders).Include(d => d.Payments)
+                .Where(p => p.ProfileId == id).FirstOrDefaultAsync();
+            
             if (profile == null)
             {
                 return NotFound("Profile with id: {id}, not found in database.");
             }
 
-            return profile;
+            return Ok(profile);
         }
 
         #endregion

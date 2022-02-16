@@ -17,5 +17,6 @@ namespace MovieSiteAPI.Models
 
 
         public ICollection<Order> Orders { get; set; }
+        public ICollection<PaymentDetails> Payments { get; set; }
     }
 }
