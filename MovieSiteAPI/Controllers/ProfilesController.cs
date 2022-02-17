@@ -146,7 +146,6 @@ namespace MovieSiteAPI.Controllers
         #endregion
 
 
-
         #region Login function
 
         // Login function
@@ -159,7 +158,7 @@ namespace MovieSiteAPI.Controllers
 
                 // user variable should look for a data from database where
                 // user.Email and user.Password should match the Email and Password set in database
-                var user = await _context.Profile.Where(user => user.Email == Email && user.Password == Password).FirstOrDefaultAsync();
+                var user = await _context.Profile.Include(o => o.Orders).Where(user => user.Email == Email && user.Password == Password).FirstOrDefaultAsync();
 
                 //if user find in database with the typed in credentials -->
                 if (user != null)
