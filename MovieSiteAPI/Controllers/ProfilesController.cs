@@ -27,7 +27,7 @@ namespace MovieSiteAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Profile>>> GetProfiles()
         {
-            return await _context.Profile.Include(o => o.Orders).ToListAsync();
+            return await _context.Profile.ToListAsync();
         }
 
         #endregion
@@ -136,6 +136,15 @@ namespace MovieSiteAPI.Controllers
             return _context.Profile.Any(e => e.ProfileId == id);
         }
         #endregion
+
+
+        #region Email exists boolean
+        private bool EmailExists(string email)
+        {
+            return _context.Profile.Any(e => e.Email == email);
+        }
+        #endregion
+
 
 
         #region Login function

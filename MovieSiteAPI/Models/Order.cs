@@ -21,6 +21,6 @@ namespace MovieSiteAPI.Models
         public DateTime OrderDate { get; set; }
         public bool isPaid { get; set; }  // paid or not
 
-       // public ICollection<PaymentDetails> PaymentDetails { get; set; }
+        public ICollection<PaymentDetails> Payments { get; set; }
     }
 }
