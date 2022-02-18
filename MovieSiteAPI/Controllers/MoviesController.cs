@@ -33,6 +33,23 @@ namespace MovieSiteAPI.Controllers
         #endregion
 
 
+        #region get movue by ID for update
+        [HttpGet("getMovieById/{id}")]
+        public async Task<ActionResult<Movie>> GetMovieById(int id)
+        {
+            var movie = await _context.Movie.FindAsync(id);
+
+
+            if (movie == null)
+            {
+                return null;
+            }
+
+            return movie;
+        }
+        #endregion
+
+
         #region Get movie with ID
 
         // GET: api/Movies/5
@@ -51,8 +68,7 @@ namespace MovieSiteAPI.Controllers
 
         #endregion
 
-<<<<<<< HEAD
-=======
+
         #region Get movie with Date
 
         // GET: api/Movies/mostRecentMovies
@@ -76,18 +92,16 @@ namespace MovieSiteAPI.Controllers
 
         #endregion
 
->>>>>>> Joseph-Branch
 
         #region update movie with ID
 
         // PUT: api/Movies/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMovie(int id, Movie movie)
         {
             if (id != movie.MovieId)
             {
-                return BadRequest();
+                return BadRequest("Invalid id: "+id+", sent from the client.");
             }
 
             _context.Entry(movie).State = EntityState.Modified;
@@ -100,7 +114,7 @@ namespace MovieSiteAPI.Controllers
             {
                 if (!MovieExists(id))
                 {
-                    return NotFound();
+                    return NotFound("Movie with id: "+id+", not found in database.");
                 }
                 else
                 {
@@ -145,7 +159,7 @@ namespace MovieSiteAPI.Controllers
             var movie = await _context.Movie.FindAsync(id);
             if (movie == null)
             {
-                return NotFound();
+                return NotFound("Movie with id: {id} ,not found in database.");
             }
 
             _context.Movie.Remove(movie);

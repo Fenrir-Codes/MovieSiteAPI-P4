@@ -36,16 +36,16 @@ namespace MovieSiteAPI.Controllers
         #region Get a profile with ID function
         // GET: api/Profiles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Profile>> GetProfile(int id)
+        public async Task<ActionResult> GetProfile(int id)
         {
-            var profile = await _context.Profile.FindAsync(id);
-
+            var profile = await _context.Profile.Include(o => o.Orders).Where(p => p.ProfileId == id).FirstOrDefaultAsync();
+            
             if (profile == null)
             {
                 return NotFound("Profile with id: {id}, not found in database.");
             }
 
-            return profile;
+            return Ok(profile);
         }
 
         #endregion
@@ -59,7 +59,7 @@ namespace MovieSiteAPI.Controllers
         {
             if (id != profile.ProfileId)
             {
-                return BadRequest("Profile with id: {id}, not found in database.");
+                return BadRequest("Profile with id: "+id+", not found in database.");
             }
 
             _context.Entry(profile).State = EntityState.Modified;
@@ -72,7 +72,7 @@ namespace MovieSiteAPI.Controllers
             {
                 if (!ProfileExists(id))
                 {
-                    return NotFound("Profile with id: {id}, not found in database.");
+                    return NotFound("Profile with id: "+id+", not found in database.");
                 }
                 else
                 {
@@ -133,6 +133,14 @@ namespace MovieSiteAPI.Controllers
         private bool ProfileExists(int id)
         {
             return _context.Profile.Any(e => e.ProfileId == id);
+        }
+        #endregion
+
+
+        #region Email exists boolean
+        private bool EmailExists(string email)
+        {
+            return _context.Profile.Any(e => e.Email == email);
         }
         #endregion
 

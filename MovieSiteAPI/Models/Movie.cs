@@ -15,7 +15,7 @@ namespace MovieSiteAPI.Models
         public string Genre { get; set; }
         public string Image { get; set; }
         public string Duration { get; set; }  //can be displayed like 60 Min or 95 Min
-        public decimal Rating { get; set; }
+        public int Rating { get; set; }
         public DateTime ReleaseDate { get; set; }
 
         public string videoUrl { get; set; }
