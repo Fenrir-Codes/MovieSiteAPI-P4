@@ -32,6 +32,20 @@ namespace MovieSiteAPI.Controllers
 
         #endregion
 
+        [HttpGet("getMovieById/{id}")]
+        public async Task<ActionResult<Movie>> GetMovieById(int id)
+        {
+            var movie = await _context.Movie.FindAsync(id);
+
+
+            if (movie == null)
+            {
+                return null;
+            }
+
+            return movie;
+        }
+
 
         #region Get movie with ID
 
@@ -40,7 +54,6 @@ namespace MovieSiteAPI.Controllers
         public async Task<List<Movie>> GetMovie(int id) //changed to return a List , now it is returning a readable array and angular can read it.
         {
             var movie = await _context.Movie.Where(m => m.MovieId == id).ToListAsync();
-
 
             if (movie == null)
             {
