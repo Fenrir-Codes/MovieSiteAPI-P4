@@ -399,3 +399,4 @@ E:\Github Repositories\MovieSiteAPI-P4\MovieSiteAPI\obj\Debug\net5.0\MovieSiteAP
 E:\Github Repositories\MovieSiteAPI-P4\MovieSiteAPI\obj\Debug\net5.0\ref\MovieSiteAPI.dll
 E:\Github Repositories\MovieSiteAPI-P4\MovieSiteAPI\obj\Debug\net5.0\MovieSiteAPI.pdb
 E:\Github Repositories\MovieSiteAPI-P4\MovieSiteAPI\obj\Debug\net5.0\MovieSiteAPI.genruntimeconfig.cache
+E:\Github Repositories\MovieSiteAPI-P4\MovieSiteAPI\obj\Debug\net5.0\MovieSiteAPI.csproj.AssemblyReference.cache

@@ -26,7 +26,7 @@ namespace MovieSiteAPI.Models
 
 
         /* EF Relations */
-       public ICollection<Order> Orders { get; set; }
+       //public ICollection<Order> Orders { get; set; }
 
     }
 }

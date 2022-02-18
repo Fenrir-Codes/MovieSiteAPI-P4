@@ -38,11 +38,29 @@ namespace MovieSiteAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> GetProfile(int id)
         {
-            var profile = await _context.Profile.Include(o => o.Orders).Where(p => p.ProfileId == id).FirstOrDefaultAsync();
+            var profile = await _context.Profile.Include(o => o.MySubscription).Where(p => p.ProfileId == id).FirstOrDefaultAsync();
             
             if (profile == null)
             {
-                return NotFound("Profile with id: {id}, not found in database.");
+                return NotFound("Profile with id: "+id+", not found in database.");
+            }
+
+            return Ok(profile);
+        }
+
+        #endregion
+
+
+        #region Get a profile Orders with ID
+        // GET: api/Profiles/5
+        [HttpGet("getOrdersOfProfile/{id}")]
+        public async Task<ActionResult> GetOrdersOfProfile(int id)
+        {
+            var profile = await _context.Profile.Include(o => o.Orders).Where(p => p.ProfileId == id).FirstOrDefaultAsync();
+
+            if (profile == null)
+            {
+                return NotFound("Profile with id: "+id+", not found in database.");
             }
 
             return Ok(profile);
