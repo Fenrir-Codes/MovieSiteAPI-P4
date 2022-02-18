@@ -33,7 +33,7 @@ namespace MovieSiteAPI.Controllers
         #endregion
 
 
-        #region Get a profile with ID function
+        #region Get a profile with ID included subscription details function
         // GET: api/Profiles/5
         [HttpGet("{id}")]
         public async Task<ActionResult> GetProfile(int id)
