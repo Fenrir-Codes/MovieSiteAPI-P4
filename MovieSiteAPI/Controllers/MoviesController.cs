@@ -32,6 +32,8 @@ namespace MovieSiteAPI.Controllers
 
         #endregion
 
+
+        #region get movue by ID for update
         [HttpGet("getMovieById/{id}")]
         public async Task<ActionResult<Movie>> GetMovieById(int id)
         {
@@ -45,6 +47,7 @@ namespace MovieSiteAPI.Controllers
 
             return movie;
         }
+        #endregion
 
 
         #region Get movie with ID
@@ -98,7 +101,7 @@ namespace MovieSiteAPI.Controllers
         {
             if (id != movie.MovieId)
             {
-                return BadRequest("Invalid id: {id} sent from the client.");
+                return BadRequest("Invalid id: "+id+", sent from the client.");
             }
 
             _context.Entry(movie).State = EntityState.Modified;
@@ -111,7 +114,7 @@ namespace MovieSiteAPI.Controllers
             {
                 if (!MovieExists(id))
                 {
-                    return NotFound("Movie with id: {id}, not found in database.");
+                    return NotFound("Movie with id: "+id+", not found in database.");
                 }
                 else
                 {

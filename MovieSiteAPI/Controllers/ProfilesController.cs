@@ -38,8 +38,7 @@ namespace MovieSiteAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> GetProfile(int id)
         {
-            var profile = await _context.Profile.Include(o => o.Orders).Include(d => d.Payments)
-                .Where(p => p.ProfileId == id).FirstOrDefaultAsync();
+            var profile = await _context.Profile.Include(o => o.Orders).Where(p => p.ProfileId == id).FirstOrDefaultAsync();
             
             if (profile == null)
             {
@@ -60,7 +59,7 @@ namespace MovieSiteAPI.Controllers
         {
             if (id != profile.ProfileId)
             {
-                return BadRequest("Profile with id: {id}, not found in database.");
+                return BadRequest("Profile with id: "+id+", not found in database.");
             }
 
             _context.Entry(profile).State = EntityState.Modified;
@@ -73,7 +72,7 @@ namespace MovieSiteAPI.Controllers
             {
                 if (!ProfileExists(id))
                 {
-                    return NotFound("Profile with id: {id}, not found in database.");
+                    return NotFound("Profile with id: "+id+", not found in database.");
                 }
                 else
                 {
