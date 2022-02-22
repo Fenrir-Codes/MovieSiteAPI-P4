@@ -25,5 +25,7 @@ namespace MovieSiteAPI.Data
         public DbSet<MovieSiteAPI.Models.Movie> Movie { get; set; }
 
         public DbSet<MovieSiteAPI.Models.PaymentDetails> PaymentDetails { get; set; }
+
+        public DbSet<MovieSiteAPI.Models.Product> Product { get; set; }
     }
 }
