@@ -10,7 +10,7 @@ using MovieSiteAPI.Data;
 namespace MovieSiteAPI.Migrations
 {
     [DbContext(typeof(MovieSiteAPIContext))]
-    [Migration("20220222103711_i")]
+    [Migration("20220223091218_i")]
     partial class i
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -174,6 +174,9 @@ namespace MovieSiteAPI.Migrations
 
                     b.Property<int>("AddDays")
                         .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("OrderId")
                         .HasColumnType("int");

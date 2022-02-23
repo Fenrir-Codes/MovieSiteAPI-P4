@@ -173,6 +173,9 @@ namespace MovieSiteAPI.Migrations
                     b.Property<int>("AddDays")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("OrderId")
                         .HasColumnType("int");
 
