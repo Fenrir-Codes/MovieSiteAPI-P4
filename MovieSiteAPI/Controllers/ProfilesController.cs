@@ -38,7 +38,7 @@ namespace MovieSiteAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> GetProfile(int id)
         {
-            var profile = await _context.Profile.Include(o => o.MySubscription).Where(p => p.ProfileId == id).FirstOrDefaultAsync();
+            var profile = await _context.Profile.Include(o => o.Subscription).Where(p => p.ProfileId == id).FirstOrDefaultAsync();
             
             if (profile == null)
             {
